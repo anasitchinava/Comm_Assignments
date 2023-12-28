@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #A29875;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.logo {
+    margin: 0;
+    color: #FFF;
+    font-family: Rye;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.product-list {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.product-list h1 {
+    color: #000;
+    font-family: Rye;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 3.375px;
+}
+
+.product-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.about-section {
+    margin-top: 50px;
+    background-color: #A29875;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.section-content img {
+    max-width: 50%;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.text-content {
+    max-width: 50%;
+    margin-left: 50px;
+}
+
+.text-content h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 46.5px;
+}
+
+.text-content p {
+    color: #FFF;
+    font-family: Libre Bodoni;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 46.5px;
+}
+
+@media screen and (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-content {
+        flex-direction: column-reverse;
+        text-align: left;
+    }
+
+    .section-content img,
+    .text-content {
+        max-width: 100%;
+    }
+
+    .section-content img {
+        margin: 0 0 20px;
+    }
+}
