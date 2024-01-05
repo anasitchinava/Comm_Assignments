@@ -1,0 +1,37 @@
+body {
+    background-image: url('../img/background_image.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn-primary {
+    width: auto;
+    background-color: #3A5B22;
+    border-color: #3A5B22;
+}
+
+.text {
+    color: #000;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500px;
+    line-height: normal;
+}
+
+.btn-primary:hover {
+    background-color: #2F4B18;
+    border-color: #2F4B18;
+}
