@@ -41,6 +41,14 @@ const getPokemon = async (id) => {
     createPokemonCard(data);
 }
 
+let clickMenu;
+function closeActiveMenu() {
+    if (clickMenu) {
+        clickMenu.remove();
+        clickMenu = null;
+    }
+}
+
 const createPokemonCard = (pokemon) => {
     const pokemonEl = document.createElement('div');
     pokemonEl.classList.add('pokemon');
@@ -65,9 +73,6 @@ const createPokemonCard = (pokemon) => {
     pokemonEl.innerHTML = pokemonInnerHtml;
     poke_container?.appendChild(pokemonEl);
 
-
-    let clickMenu;
-
     pokemonEl.addEventListener('contextmenu', (ev) => {
         ev.preventDefault();
         closeActiveMenu();
@@ -89,13 +94,6 @@ const createPokemonCard = (pokemon) => {
             }
         });
     });
-
-    function closeActiveMenu() {
-        if (clickMenu) {
-            clickMenu.remove();
-            clickMenu = null;
-        }
-    }
 }
 
 function seeDetails(id) {
@@ -103,6 +101,7 @@ function seeDetails(id) {
 }
 
 function choosePokemon(id) {
+    closeActiveMenu();
     if (selectedPokemonsArr.length === maxPokemons) {
         alert(`Pokemons' limit exceeded!`);
         return;
